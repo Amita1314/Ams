@@ -1,0 +1,97 @@
+
+============================================================
+HERD DATASET OVERVIEW
+============================================================
+Total herds detected        : 37,317
+Date range                  : 1801-09-07 → 1896-07-26
+Distinct vessel appearances : 84,691
+Herds with 2 vessels        : 29,598  (79.3%)
+Herds with 3+ vessels       : 7,719  (20.7%)
+Herds with 5+ vessels       : 429  (1.1%)
+Largest single herd         : 11 vessels  (1845-10-08, N Pacific)
+
+============================================================
+BY DURATION BIN
+============================================================
+              n_herds    pct  avg_vessels  max_vessels  avg_dist_km  min_dist_km  avg_duration
+duration_bin                                                                                  
+1-2d             7169  19.21         2.06            5        59.99          0.0          1.66
+3-5d            12500  33.50         2.17            7        74.16          0.0          3.89
+6-10d           10547  28.26         2.31            8        93.73          0.0          7.63
+11-15d           4246  11.38         2.50            8       122.71          0.0         12.63
+16-30d           2644   7.09         2.70           11       159.27          0.0         19.69
+31-45d            186   0.50         3.38            8       184.04          0.0         35.23
+>45d               25   0.07         3.00            5       316.87          0.0         65.64
+
+============================================================
+BY OCEAN REGION
+============================================================
+              n_herds    pct  avg_vessels  max_vessels
+ocean_region                                          
+N Pacific       12080  32.37         2.32           11
+S Pacific        9865  26.44         2.23            8
+S Atlantic       7894  21.15         2.24            8
+Indian Ocean     3121   8.36         2.23            8
+N Atlantic       2895   7.76         2.23            6
+Antarctic         853   2.29         2.39            7
+Arctic            609   1.63         2.34            7
+
+============================================================
+TEMPORAL DISTRIBUTION (by decade)
+============================================================
+        n_herds  avg_vessels  max_vessels
+decade                                   
+1800          1         2.00            2
+1810         21         2.00            2
+1820        775         2.12            4
+1830       7298         2.16            9
+1840      25685         2.31           11
+1850       2887         2.30            8
+1860        485         2.02            3
+1870         16         2.00            2
+1880         13         2.00            2
+1890        136         2.04            3
+
+============================================================
+DISTANCE STATISTICS (km between vessels)
+============================================================
+       min_dist_km  avg_dist_km
+count     37317.00     37317.00
+mean         54.32        89.23
+std          53.99        74.08
+min           0.00         0.00
+25%          18.48        38.58
+50%          39.41        70.00
+75%          72.74       118.85
+max        1052.36      1322.73
+
+============================================================
+CATCH CONTEXT (totals across all herd voyages)
+============================================================
+Total sperm oil (bbls) : 57,558,679
+Total whale oil (bbls) : 141,270,112
+Total bone (lbs)       : 1,129,551,787
+
+============================================================
+TOP 20 HERDS BY VESSEL COUNT
+============================================================
+  11v   16-30d    1845-10-08 → 1845-11-01    N Pacific        Albion|Crescent|Emily Morgan|Falcon|Iris|Julius Caesar|Lagoda|Nantasket|Persi...
+  11v   16-30d    1847-10-01 → 1847-10-19    N Pacific        Amazon|Cavalier|Columbia|Frances Henrietta|George and Susan|Henry Tuke|John J...
+   9v   16-30d    1833-10-30 → 1833-11-14    N Pacific        Corinthian|Enterprise|Houqua|Huntress|Isabella|Maria Theresa|Mariner|Richard ...
+   8v   31-45d    1846-03-12 → 1846-04-16    N Pacific        Amazon|Ann Mary Ann|Columbia|George Washington|Huron|India|John Jay|Mary and ...
+   8v   31-45d    1850-11-29 → 1851-01-02    S Pacific        Abraham H. Howland|Clematis|James Maury|Lancaster|Maria Theresa|Navy|Orozimbo...
+   8v   31-45d    1848-11-02 → 1848-12-02    S Atlantic       Clematis|Fabius|John|Luminary|Navy|Noble|Richard Mitchell II|South Boston
+   8v   16-30d    1850-12-07 → 1851-01-03    S Pacific        Abraham H. Howland|America|Euphrates|Lancaster|Majestic|Maria Theresa|Navy|Un...
+   8v   16-30d    1847-12-06 → 1847-12-24    N Pacific        Cavalier|Clematis|George and Susan|Henry Tuke|John|John Jay|New England|Willi...
+   8v   16-30d    1847-03-25 → 1847-04-11    N Pacific        Amazon|Cavalier|Henry Tuke|John Jay|Lowell|New England|Plymouth|Splendid
+   8v   16-30d    1845-11-12 → 1845-11-28    Indian Ocean     Ann Mary Ann|Cabinet|Candace|Champion|India|Isaac Howland|Lowell|Peruvian
+   8v   16-30d    1846-10-01 → 1846-10-17    S Pacific        Cavalier|Hope II|Isabella|Montano|Navy|Nile|Romulus|Tuscarora
+   8v   11-15d    1847-11-06 → 1847-11-16    N Pacific        Cavalier|Columbia|Frances Henrietta|George and Susan|George Washington|Lowell...
+   8v    6-10d    1844-09-24 → 1844-10-03    N Pacific        Blackstone|Concordia|Cortes|Henry Lee|Kutusoff|New England|Pantheon|Rousseau
+   8v    6-10d    1849-01-25 → 1849-02-02    S Atlantic       America|Clematis|Huntsville|John|Luminary|Majestic|Nimrod|Ohio II
+   7v   31-45d    1839-08-11 → 1839-09-18    S Atlantic       Amazon|Ann Maria|Atlantic|Hamilton II|Neptune|St. Peter|Zephyr
+   7v   31-45d    1848-10-24 → 1848-11-23    Antarctic        California|Caroline|Citizen|Fabius|John Jay|Rousseau|Sheffield
+   7v   16-30d    1841-09-23 → 1841-10-19    S Atlantic       Elizabeth|Heroine|Hydaspe|Israel|Jason|Mayflower|Thomas Dickason
+   7v   16-30d    1847-09-01 → 1847-09-24    N Pacific        Alice|Ann Mary Ann|Cabinet|Caroline|India|Navy|Romulus
+   7v   16-30d    1844-01-31 → 1844-02-22    Antarctic        Crescent|Frances|George Washington|Iris|Lagoda|Marcia|Virginia
+   7v   16-30d    1845-12-01 → 1845-12-22    S Pacific        Alice|Crescent|Falcon|Iris|Lagoda|Liverpool II|William Tell
