@@ -262,10 +262,11 @@ def aggregate_herds(
     df = daily_df.copy()
     df["herd_cluster_id"] = labels
 
-    # Attach ordinal and labels to raw obs for the per-obs output file
-    obs_out = obs_df_raw[["sequence", "voyageID", "lat", "lon",
-                           "day", "month", "year"]].copy()
-    obs_out["herd_cluster_id"] = labels
+    # obs_out is based on daily_df (aggregated), not the raw obs
+    obs_out = df[["voyageID", "lat", "lon", "ordinal", "herd_cluster_id"]].copy()
+    obs_out["date"] = obs_out["ordinal"].apply(
+        lambda o: datetime.date.fromordinal(int(o)).isoformat()
+    )
 
     # Only process valid clusters (not noise)
     clustered = df[df["herd_cluster_id"] >= 0].copy()
@@ -290,13 +291,6 @@ def aggregate_herds(
           f"(min_vessels={min_vessels}, min_voyage_days={min_voyage_days})")
 
     # Build summary rows
-    # Pre-index raw obs by (voyageID, ordinal) for encounter lookup
-    enc_lookup = (
-        obs_df_raw.set_index(["voyageID", "ordinal"])["encounter"]
-        if "ordinal" in obs_df_raw.columns
-        else None
-    )
-
     rows = []
     for cid in valid_clusters:
         c = clustered[clustered["herd_cluster_id"] == cid]
@@ -537,13 +531,6 @@ def main():
     # Prepare
     print("Preparing daily positions …")
     daily_df = aggregate_voyage_days(obs_df)
-    # Carry ordinal back to obs_df for encounter lookups
-    ordinal_map = daily_df.set_index(["voyageID", "ordinal"])
-    obs_df = obs_df.copy()
-    obs_df["ordinal"] = obs_df.apply(
-        lambda r: to_ordinal(r["day"], r["month"], r["year"]), axis=1
-    )
-
     if args.diagnostic:
         run_diagnostic(daily_df, args)
         return
@@ -560,7 +547,7 @@ def main():
     herds_df, obs_out = aggregate_herds(
         daily_df, labels, voyage_meta,
         args.min_vessels, args.min_voyage_days,
-        obs_df,
+        obs_df_raw=obs_df,
     )
 
     # Print summary
