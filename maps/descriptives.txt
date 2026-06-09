@@ -1,0 +1,96 @@
+
+============================================================
+HERD DATASET OVERVIEW
+============================================================
+Total herds detected        : 29,806
+Date range                  : 1818-10-12 → 1896-07-26
+Distinct vessel appearances : 66,253
+Herds with 2 vessels        : 24,535  (82.3%)
+Herds with 3+ vessels       : 5,271  (17.7%)
+Herds with 5+ vessels       : 236  (0.8%)
+Largest single herd         : 9 vessels  (1847-11-06, N Pacific)
+
+============================================================
+BY DURATION BIN
+============================================================
+              n_herds    pct  avg_vessels  max_vessels  avg_dist_km  min_dist_km  avg_duration
+duration_bin                                                                                  
+1-2d            10395  34.88         2.09            5        70.24          0.0          1.65
+3-5d            13108  43.98         2.23            8        96.57          0.0          3.79
+6-10d            5387  18.07         2.38            8       135.38          0.0          7.23
+11-15d            716   2.40         2.73            9       188.76          0.0         12.20
+16-30d            171   0.57         2.61            7       197.50          0.0         19.49
+31-45d             16   0.05         2.25            4       133.30          0.0         37.00
+>45d               13   0.04         2.23            4       296.70          0.0         71.31
+
+============================================================
+BY OCEAN REGION
+============================================================
+              n_herds    pct  avg_vessels  max_vessels
+ocean_region                                          
+N Pacific       10394  34.87         2.28            9
+S Pacific        7793  26.15         2.18            7
+S Atlantic       5830  19.56         2.18            7
+Indian Ocean     2532   8.49         2.19            7
+N Atlantic       1977   6.63         2.13            6
+Antarctic         682   2.29         2.31            6
+Arctic            598   2.01         2.38            6
+
+============================================================
+TEMPORAL DISTRIBUTION (by decade)
+============================================================
+        n_herds  avg_vessels  max_vessels
+decade                                   
+1810         13         2.00            2
+1820        530         2.08            4
+1830       5515         2.10            5
+1840      20937         2.26            9
+1850       2330         2.29            9
+1860        345         2.01            3
+1870         14         2.00            2
+1880         14         2.00            2
+1890        108         2.04            3
+
+============================================================
+DISTANCE STATISTICS (km between vessels)
+============================================================
+       min_dist_km  avg_dist_km
+count     29806.00     29806.00
+mean         57.95        97.30
+std          58.82        80.95
+min           0.00         0.00
+25%          18.90        42.20
+50%          40.72        75.40
+75%          77.87       128.82
+max        1161.60      1161.60
+
+============================================================
+CATCH CONTEXT (totals across all herd voyages)
+============================================================
+Total sperm oil (bbls) : 43,246,603
+Total whale oil (bbls) : 113,857,153
+Total bone (lbs)       : 919,637,000
+
+============================================================
+TOP 20 HERDS BY VESSEL COUNT
+============================================================
+   9v   11-15d    1847-11-06 → 1847-11-18    N Pacific        Cavalier|Columbia|Frances Henrietta|George and Susan|George Washington|Henry ...
+   9v   11-15d    1850-09-04 → 1850-09-14    N Pacific        Abraham H. Howland|Cherokee|Euphrates|Kutusoff|Marengo|Milo|Navy|Sheffield|Un...
+   8v   11-15d    1846-05-10 → 1846-05-22    N Pacific        Cabinet|Cavalier|Champion|Chili|Hope II|Mobile|Navy|Romulus
+   8v    6-10d    1844-09-21 → 1844-09-29    N Pacific        Blackstone|Concordia|Cortes|Henry Lee|Kutusoff|New England|Rousseau|South Bos...
+   8v    6-10d    1850-09-30 → 1850-10-07    N Pacific        Abraham H. Howland|John|Majestic|Milo|Navy|Nimrod|Sheffield|Uncas
+   8v     3-5d    1845-07-23 → 1845-07-26    N Pacific        Albion|Alciope|Charles Phelps / Progress|Emily Morgan|Hopewell|John Wells|Nan...
+   7v   16-30d    1844-11-23 → 1844-12-09    S Atlantic       Alfred Tyler / Eureka|Factor|Henry Astor|London Packet II|Richmond|Roman II|S...
+   7v   11-15d    1846-09-16 → 1846-09-29    N Pacific        America|Columbia|India|John Jay|Ohio II|Robert Bowne|Statira
+   7v   11-15d    1845-11-03 → 1845-11-16    Indian Ocean     Candace|Columbia|Dromo|George Washington|India|Peruvian|Superior
+   7v   11-15d    1845-11-22 → 1845-12-04    S Pacific        Alice|Crescent|Georgia|Julius Caesar|Lagoda|Liverpool II|Neptune
+   7v   11-15d    1846-04-27 → 1846-05-09    N Pacific        Cabinet|Champion|Chili|Hope II|Navy|Nile|Romulus
+   7v   11-15d    1846-10-25 → 1846-11-04    S Pacific        Cavalier|Hopewell|Isabella|Liverpool II|Metacom|Navy|William Hamilton
+   7v    6-10d    1843-04-25 → 1843-05-01    N Pacific        Callao|Clifford Wayne|Condor|Kutusoff|Marcia|Pantheon|Young Hero
+   7v    6-10d    1846-10-20 → 1846-10-26    N Pacific        Amazon|Huron|India|Julius Caesar|New England|North America|Robert Bowne
+   7v    6-10d    1850-09-23 → 1850-09-28    N Pacific        John|Lancaster|Milo|Navy|Nimrod|Sheffield|Uncas
+   7v    6-10d    1845-09-30 → 1845-10-05    S Atlantic       Amazon|Cavalier|Christopher Mitchell|Montano|Rousseau|Susan|Tuscarora
+   7v     3-5d    1845-09-29 → 1845-10-03    N Pacific        Albion|Amethyst|Crescent|Falcon|Lagoda|Liverpool II|Roman II
+   6v   16-30d    1847-08-29 → 1847-09-14    N Pacific        California|Cherokee|Citizen|J. E. Donnell|Magnolia|Portsmouth
+   6v   11-15d    1845-09-14 → 1845-09-27    S Atlantic       Blackstone|Columbia|Daniel Webster|India|Peruvian|Superior
+   6v   11-15d    1845-04-15 → 1845-04-27    N Pacific        Charles Phelps / Progress|Coral|Factor|Iris|Mary and Susan|Silas Richards
